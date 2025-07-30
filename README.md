@@ -24,41 +24,27 @@ etc
 ### 구조
 ```bash
 CV_classification/
-├── configs/                           ← 모델/데이터셋 별 config yaml
+├── main.py                  ← 학습 파이프라인 시작점
+├── visualize.py             ← 학습된 모델에 대해 attribution 시각화 실행
+├── train.py                 ← 학습/검증 루프 정의
+├── run_experiments.py       ← 여러 모델 반복 실험 스크립트
+
+├── attribution/
+│   ├── __init__.py
+│   ├── utils.py             ← normalize, heatmap 등 유틸
+│   ├── vanilla_grad.py      ← Vanilla gradients 핵심 구현
+│   └── visualizer.py        ← attribution 실행 및 시각화 도구
+
+├── datasets/
+│   ├── __init__.py
+│   ├── augmentation.py      ← get_augmentation()
+│   └── factory.py           ← create_dataset(), create_dataloader()
+
+├── configs/                 ← 모델/데이터셋별 YAML 설정
 │   ├── cifar10_resnet18.yaml
-│   ├── tiny_resnet18.yaml
-│   └── ...
-│
-├── datasets/                          ← 데이터셋 로딩 코드
-│
-├── models/                            ← ResNet, ViT 등 모델 정의
-│
-├── train.py                           ← 모델 학습 코드
-├── test.py                            ← 모델 평가 코드
-│
-├── main.py                            ← 학습 전체 파이프라인
-│
-├── attribution/                       ← attribution 관련 코드
-│   ├── vanilla_grad.py
-│   ├── run_attribution.py
-│   ├── visualize.py
-│   └── results/
-│       ├── cifar10/
-│       │   ├── resnet18/
-│       │   │   ├── airplane_1.png
-│       │   └── vit_small/
-│       └── tiny-imagenet/
-│           ├── resnet18/
-│           └── vit_base/
-│
-├── saved_model/
-│   ├── cifar10/
-│   │   ├── resnet18/
-│   │   │   └── best_model.pth
-│   └── tiny-imagenet/
-│       └── resnet18/
-│
-├── scripts/
-│   ├── train_all.py                   ← 모든 config 학습 자동화 스크립트
-│   └── attribution_all.py            ← 학습된 모델 attribution 일괄 실행
+│   └── tiny_beit_base.yaml
+
+├── saved_model/            ← 학습된 모델 저장
+└── results/                ← 실험 결과 기록 (CSV 등)
+
 ```
