@@ -9,6 +9,7 @@
 2. timm으로 모델을 바꿔보며 실험
 
 ### 구조
+```bash
 CV_classification/
 ├── configs/                           ← 모델/데이터셋 별 config yaml
 │   ├── cifar10_resnet18.yaml
@@ -47,3 +48,4 @@ CV_classification/
 ├── scripts/
 │   ├── train_all.py                   ← 모든 config 학습 자동화 스크립트
 │   └── attribution_all.py            ← 학습된 모델 attribution 일괄 실행
+```
