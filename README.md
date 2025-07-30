@@ -6,7 +6,20 @@
 
 ## 실험 내용
 1. image의 attribution을 추출하는 것이 무엇인지 파악 (vanilla gradients)
+| 파악 대상                      | 설명                                                   |
+|-------------------------------|--------------------------------------------------------|
+| 🔍 어떤 위치의 픽셀이 예측에 중요한지 | attribution map은 중요 pixel에 높은 값                    |
+| 🔍 모델이 특정 클래스에 주목한 영역  | 예: 고양이 class 예측 시 귀, 눈, 얼굴 주변이 강조됨       |
+| 🔍 모델 간 해석 비교              | ResNet18 vs ResNet50 vs ViT 등                         |
+| 🔍 데이터셋 간 반응 차이          | CIFAR10 vs Tiny-ImageNet 등                            |
+
+
 2. timm으로 모델을 바꿔보며 실험
+
+ex)
+hyper-parameter 변화에 따른 성능 및 학습(검증) 과정 비교
+학습된 모델의 logits이 class 별로 잘 구분 되는지 (PCA, t-SNE 등)
+etc
 
 ### 구조
 ```bash
