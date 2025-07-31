@@ -64,10 +64,12 @@ results/
     └── ... (optional: confusion_matrix.png, npz files)
 ```
 
+| Model Name             | Turning Point | Val Loss | Val Acc | Val Acc* | Val Acc@*Epoch | Test Loss | Test Acc |
+|------------------------|----------------|----------|---------|----------|------------------|-----------|----------|
+| `efficientnet_b0`      | 6              | 0.578    | 0.6614  | 0.6614   | 6                | 2.250     | 0.6555   |
+| `mobilenetv2_100`      | 8              | 0.632    | 0.6261  | 0.6261   | 8                | 2.228     | 0.6164   |
+| `resnet18`             | 5              | 0.542    | 0.6723  | 0.6723   | 5                | 2.180     | 0.6689   |
+| `vit_tiny_patch16_224` | 12             | 0.693    | 0.6025  | 0.6025   | 12               | 2.380     | 0.5897   |
 
 
-- Accuracy / Loss: 자동 기록 및 .json 저장
-- Feature Representation: logits.pt, labels.pt 기반 분석 (t-SNE 등 가능)
-- Confusion Matrix: confusion_matrix.png 저장
-- Error Analysis: 추후 misclassified sample 시각화 가능
 
