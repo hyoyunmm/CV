@@ -51,7 +51,7 @@ python main.py --config configs/tiny_imagenet_resnet50.yaml
 python main.py --config configs/tiny_imagenet_efficientnet_b0.yaml
 ```
 
-## Evaluation & Visualization
+## Evaluation
 ```bash
 results/
 └── tiny_imagenet_resnet50/
