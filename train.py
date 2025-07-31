@@ -145,7 +145,7 @@ def test(model, dataloader, criterion, log_interval: int, device: str, savedir: 
     acc = correct / total
     loss = total_loss / len(dataloader)
 
-    # 🔽 결과 저장
+    # 결과 저장
     os.makedirs(savedir, exist_ok=True)
     np.savez(
         os.path.join(savedir, f'{exp_name}_result.npz'),
