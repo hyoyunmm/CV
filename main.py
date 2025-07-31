@@ -3,8 +3,6 @@
 # 학습 따로 : python main.py --config configs/tiny_imagenet_res18.yaml
 # 시각화 따로 : python visualize.py --config configs/tiny_imagenet_res18.yaml
 
-# wandb : 9054352507e8ea9dc669080003f2c56629a2132e
-# 
 # python main.py --config configs/tiny_imagenet_vit_tiny_patch16_224.yaml
 # python main.py --config configs/tiny_imagenet_resnet18.yaml
 import argparse
