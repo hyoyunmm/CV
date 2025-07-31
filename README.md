@@ -64,6 +64,8 @@ results/
     └── ... (optional: confusion_matrix.png, npz files)
 ```
 
+
+
 - Accuracy / Loss: 자동 기록 및 .json 저장
 - Feature Representation: logits.pt, labels.pt 기반 분석 (t-SNE 등 가능)
 - Confusion Matrix: confusion_matrix.png 저장
